@@ -3,3 +3,47 @@ Tatyna:
  1. Read and make a plan
  2. Write code
  3. Revision and fix bugs
+
+ Marina:
+ 1. Check virtual environment.
+ 2. Go to tests. CHECK TESTS FIRST. Rewrite some tests.
+ 3. Activate PYTEST
+ 4. If tests are wrong, think on it: 
+ - Is it your test? Improve it! 
+ - Was it given test? Change the code to go through the tests.
+ 5. Improve code in PARTY.PU
+ 6. Repeat steps until all test have been finished. 
+ 7. SWITCH ROLES REGULARLY, DON'T FORFET GIT PULL AND GIT PUSH.
+    THE MAIN IDEA OF THIS PROJECT IS TO MASTER IN NAVIGATION OF GIT.
+ 8. Play testing. Using play_tester.py it was suggested to play with code.
+ 9. DON'T TOUCH TEST_CONSTANTS.PY.
+ 10. All names of functiona are in the description. 
+
+ WAVE 1. def create_movie(title, gender, rating)
+         def add_to_watched(user_data, movie)
+         def add_to_watchlist(user_data, movie)
+         def watch_movie(user_data, title)
+
+ DON'T CHANGE THE PARAMETER USER_DATA
+
+ WAVE 2. def get_watched_avg_rating(user_data)
+         def get_most_watched_genre(user_data)
+
+ WAVE 3. def get_unique_watched(user_data)
+         def get_friends_unique_watched(user_data)
+
+ WAVE 4. def get_available_recs(user_data)
+
+ WAVE 5. def get_new_rec_by_genre(user_data)
+         def get_rec_from_favorites(user_data)
+
+PLAN
+MONDAY: study assignment, sketches.
+
+TUESDAY: write tests and functions.
+
+WEDNSDAY: edge check the system's functionality.
+
+THURSDAY: reserv day.
+
+
