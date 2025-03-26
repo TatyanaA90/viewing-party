@@ -1,6 +1,6 @@
 # ------------- WAVE 1 --------------------
 def create_movie(title, genre, rating):
-    if title is None or genre is None or rating is None:
+    if None in (title, genre, rating):
         return None
     
     return {
@@ -10,12 +10,14 @@ def create_movie(title, genre, rating):
     }
 
 def add_to_watched(user_data, movie):
-    user_data["watched"].append(movie)
-    return user_data
+    copy_user_data = dict(user_data)
+    copy_user_data["watched"].append(movie)
+    return copy_user_data
 
 def add_to_watchlist(user_data, movie):
-    user_data["watchlist"].append(movie)
-    return user_data
+    copy_user_data = dict(user_data)
+    copy_user_data["watchlist"].append(movie)
+    return copy_user_data
 
 def watch_movie(user_data, title):
     for movie in user_data["watchlist"]:
