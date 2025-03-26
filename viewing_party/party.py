@@ -1,12 +1,55 @@
 # ------------- WAVE 1 --------------------
-
 def create_movie(title, genre, rating):
-    pass
+    if title is None or genre is None or rating is None:
+        return None
+    
+    return {
+        "title": title,
+        "genre": genre,
+        "rating": rating
+    }
+
+def add_to_watched(user_data, movie):
+    user_data["watched"].append(movie)
+    return user_data
+
+def add_to_watchlist(user_data, movie):
+    user_data["watchlist"].append(movie)
+    return user_data
+
+def watch_movie(jenes_data, title):
+    for movie in jenes_data["watchlist"]:
+        if movie["title"] == title:
+            jenes_data["watchlist"].remove(movie)
+            jenes_data["watched"].append(movie)
+    return jenes_data
 
 # -----------------------------------------
 # ------------- WAVE 2 --------------------
 # -----------------------------------------
+def get_watched_avg_rating(janes_data):
+    if len(janes_data["watched"]) == 0:
+        return 0.0
+    
+    total_rating = 0.0
+    for movie in janes_data["watched"]:
+        total_rating += movie["rating"]
+        
+    average_rating = total_rating / len(janes_data["watched"])
+    return average_rating
+        
 
+
+def get_most_watched_genre(janes_data):
+    if not janes_data["watched"]:
+        return None
+
+    genre_counts = {}
+
+    for movie in janes_data["watched"]:
+        genre_counts[movie["genre"]] = genre_counts.get(movie["genre"], 0) + 1
+
+    return max(genre_counts, key=genre_counts.get)
 
 # -----------------------------------------
 # ------------- WAVE 3 --------------------
