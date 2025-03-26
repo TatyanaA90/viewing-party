@@ -6,7 +6,7 @@ from tests.test_constants import *
 def test_my_unique_movies():
     # Arrange
     amandas_data = clean_wave_3_data()
-    print(f"Amanda data: {amandas_data}")
+    #print(f"Amanda data: {amandas_data}")
 
     # Act
     amandas_unique_movies = get_unique_watched(amandas_data)
@@ -57,6 +57,7 @@ def test_friends_unique_movies_not_duplicated():
 
     # Assert
     assert len(friends_unique_movies) == 3
+    assert INTRIGUE_3 in friends_unique_movies
 
     #raise Exception("Test needs to be completed.")
     # *************************************************************************************************
