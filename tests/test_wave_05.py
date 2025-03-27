@@ -6,7 +6,7 @@ from tests.test_constants import *
 def test_new_genre_rec():
     # Arrange
     sonyas_data = clean_wave_5_data()
-    print(f"sonyas_data: {sonyas_data}")
+
     # Act
     recommendations = get_new_rec_by_genre(sonyas_data)
 
@@ -54,7 +54,6 @@ def test_new_genre_rec_from_empty_friends():
     }
     # Act 
     recommendations = get_new_rec_by_genre(sonyas_data)
-    #print(recommendations)
 
     # Assert
     assert len(recommendations) == 0
@@ -68,7 +67,7 @@ def test_new_genre_rec_from_empty_friends():
 def test_unique_rec_from_favorites():
     # Arrange
     sonyas_data = clean_wave_5_data()
-    #print(sonyas_data)
+
     # Act
     recommendations = get_rec_from_favorites(sonyas_data)
 

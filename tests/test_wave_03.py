@@ -6,7 +6,6 @@ from tests.test_constants import *
 def test_my_unique_movies():
     # Arrange
     amandas_data = clean_wave_3_data()
-    #print(f"Amanda data: {amandas_data}")
 
     # Act
     amandas_unique_movies = get_unique_watched(amandas_data)
@@ -33,11 +32,9 @@ def test_my_not_unique_movies():
 def test_friends_unique_movies():
     # Arrange
     amandas_data = clean_wave_3_data()
-    #print (f"amandas_data: {amandas_data}")
 
     # Act
     friends_unique_movies = get_friends_unique_watched(amandas_data)
-    #print(f"friends_unique_movies: {friends_unique_movies}")
 
     # Assert
     assert len(friends_unique_movies) == 3

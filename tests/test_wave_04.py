@@ -6,7 +6,7 @@ from tests.test_constants import *
 def test_get_available_friend_rec():
     # Arrange
     amandas_data = clean_wave_4_data()
-    #print(f"amandas_data: {amandas_data}")
+
     # Act
     recommendations = get_available_recs(amandas_data)
 
